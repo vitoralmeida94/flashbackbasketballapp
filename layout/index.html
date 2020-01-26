@@ -1,0 +1,53 @@
+<html >
+    <head>
+        <title>Pelada FlashBack</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="../angular/angular.js"></script>
+        <script src="../angular/app.js"></script>
+        <script src="../angular/flashback.controller.js"></script>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
+        <script src="../js/bootstrap.min.js"></script>
+        <meta charset="UTF-8">   
+    </head>
+    <body ng-app="flashbackApp" ng-controller="flashbackController as vm" ng-init="vm.report=false;">
+        <div class="container">
+        <div class="col-lg-12 col-xs-12" style="padding-bottom: 2px;background-color: #647379;">
+            <div class="row">    
+                <div class="col-lg-3 col-xs-3">Jogador</div>
+                <div class="col-lg-3 col-xs-3"></div>
+                <div class="col-lg-3 col-xs-3"></div>
+                <div class="col-lg-3 col-xs-3">Total</div>
+            </div>
+        </div>
+        <div class="col-lg-12 col-xs-12" style="background-color: #95A1A6;">
+            <div class="row" ng-repeat="item in vm.playersList" style="margin-top:5px;margin-bottom: 2px;">    
+                <div class="col-lg-3 col-xs-3" ng-bind="item.name">
+
+                </div>
+                <div class="col-lg-3 col-xs-3">
+                    <button class="btn btn-success" ng-click="vm.events.addScore(item.name,2)">+2</button>
+                </div>
+                <div class="col-lg-3 col-xs-3">
+                    <button  class="btn btn-success" ng-click="vm.events.addScore(item.name,3)">+3</button>
+                </div>
+                <div class="col-lg-3 col-xs-3" ng-bind="item.points">
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="container">
+           <div class="col-lg-12 col-xs-12">
+            <button  class="btn btn-info" style="text-align:center;margin-top:10px" ng-click="vm.report=true" >Relatório</button>
+            <div class="row align-items-center" ng-repeat="item in vm.playersList" ng-show="vm.report" style="margin-top:3px;">
+                <div class="row" style="color:black">
+                    {{item.name}} fez {{item.points}} <span ng-if="item.points > 0">pontos</span><span ng-if="item.points == 0">ponto</span>
+                </div>
+            </div>
+            </div> 
+        </div>
+        
+    </body>
+</html>
