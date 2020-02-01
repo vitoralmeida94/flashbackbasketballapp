@@ -25,15 +25,18 @@ angular
                 {name:'Sem Vida',points:0},
                 {name:'Sgt Sousa',points:0},
                 {name:'Bombado',points:0},
-                {name:'Bizzunci',points:0},
-                {name:'Rostiolla',points:0}
+                {name:'Frederico',points:0},
+                {name:'João Pedro',points:0},
+                {name:'João Vitor',points:0},
+                {name:'Dudu',points:0}
             ];
 
             vm.playersList=[];
             vm.events = events;
             vm.events.list();
 
-            
+            vm.date = new Date();
+            vm.date = ""+vm.date.getDate() + "/"+(vm.date.getMonth()+1)+"/2020";
         };   
 
         const events={
