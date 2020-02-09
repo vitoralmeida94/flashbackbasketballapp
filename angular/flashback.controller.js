@@ -58,9 +58,15 @@ angular
                     if(vm.playersList[i].name === player){
                         vm.playersList[i].points = vm.playersList[i].points + p;
                     }
-                }
-               
-            }
+                }               
+            },
+            subtractScore: function(player,p){
+                for(let i=0;i<vm.playersList.length;i++){
+                    if(vm.playersList[i].name === player){
+                        vm.playersList[i].points = vm.playersList[i].points - p;
+                    }
+                }               
+            },
 
             
         };
