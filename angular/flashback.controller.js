@@ -28,7 +28,8 @@ angular
                 {name:'Frederico',points:0},
                 {name:'João Pedro',points:0},
                 {name:'João Vitor',points:0},
-                {name:'Dudu',points:0}
+                {name:'Luis',points:0},
+                {name:'Freire',points:0}
             ];
 
             vm.playersList=[];
