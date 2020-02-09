@@ -2,7 +2,10 @@
     border-radius: 80px 80px 80px 80px;
     
 }
-
+.btn-danger{
+    border-radius: 80px 80px 80px 80px;
+    
+}
 body{
     color: white;
 }
