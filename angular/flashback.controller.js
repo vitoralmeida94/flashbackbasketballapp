@@ -39,7 +39,8 @@ angular
                 { name: 'João Vitor ', points: 0 },
                 { name: 'João Abrantes ', points: 0 },
                 { name: 'Márcio Piragibe', points: 0 }, 
-                { name: 'Allam', points:0 }
+                { name: 'Allam', points:0 },
+                { name: 'Daniel', points:0 }
             ];
 
             vm.playersList=[];
