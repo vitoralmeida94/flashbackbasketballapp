@@ -39,7 +39,7 @@ angular
                 { name: 'João Vitor ', points: 0 },
                 { name: 'João Abrantes ', points: 0 },
                 { name: 'Márcio Piragibe', points: 0 }, 
-                 {name: 'Allam', points:0}
+                { name: 'Allam', points:0 }
             ];
 
             vm.playersList=[];
@@ -59,15 +59,20 @@ angular
                     if(vm.playersList[i].name === player){
                         vm.playersList[i].points = vm.playersList[i].points + p;
                     }
-                }               
+                }
+                localStorage.setItem("score",JSON.stringify(vm.playersList));               
             },
             subtractScore: function(player,p){
                 for(let i=0;i<vm.playersList.length;i++){
                     if(vm.playersList[i].name === player){
                         vm.playersList[i].points = vm.playersList[i].points - p;
                     }
-                }               
+                }
+                localStorage.setItem("score",JSON.stringify(vm.playersList));               
             },
+            rollbackScore: function(){
+                vm.playersList = JSON.parse(localStorage.getItem('score'));
+            }
 
             
         };
